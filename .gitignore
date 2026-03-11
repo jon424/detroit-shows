@@ -1,3 +1,5 @@
 node_modules/
 .env
+scraper/.env
+js/config.js
 trinosophes_raw.html

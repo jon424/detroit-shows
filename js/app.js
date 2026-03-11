@@ -1,11 +1,7 @@
 (function () {
   "use strict";
 
-  // --- Configuration ---
-  // Replace these with your Supabase project values.
-  // The anon key is safe to expose in client code — RLS restricts access.
-  const SUPABASE_URL = "YOUR_SUPABASE_URL";
-  const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
+  const { SUPABASE_URL, SUPABASE_ANON_KEY } = window.CONFIG;
 
   const VENUE_LABELS = {
     trinosophes: "Trinosophes",

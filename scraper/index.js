@@ -1,6 +1,18 @@
+import { readFileSync } from "fs";
 import { createClient } from "@supabase/supabase-js";
 import { scrapeTrinosophes } from "./trinosophes.js";
 import { scrapeMoondog } from "./moondog.js";
+
+// Load .env from project root when running locally
+if (!process.env.SUPABASE_URL) {
+  try {
+    const envPath = new URL("../.env", import.meta.url);
+    for (const line of readFileSync(envPath, "utf-8").split("\n")) {
+      const [key, ...rest] = line.split("=");
+      if (key && rest.length) process.env[key.trim()] = rest.join("=").trim();
+    }
+  } catch {}
+}
 
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_KEY;
