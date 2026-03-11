@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detroit Shows</title>
+  <meta name="description" content="Upcoming experimental and improvised music concerts in Detroit">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Detroit Shows</h1>
+    <p class="subtitle">experimental &amp; improvised music</p>
+  </header>
+
+  <nav class="filters">
+    <button class="filter-btn active" data-venue="all">All</button>
+    <button class="filter-btn" data-venue="trinosophes">Trinosophes</button>
+    <button class="filter-btn" data-venue="moondog">Moondog Cafe</button>
+  </nav>
+
+  <main id="events">
+    <div class="loading">loading&hellip;</div>
+  </main>
+
+  <footer>
+    <p>
+      Sources:
+      <a href="https://trinosophes.com/Events" target="_blank" rel="noopener">Trinosophes</a> &middot;
+      <a href="https://www.moondogcafedetroit.com/calendar" target="_blank" rel="noopener">Moondog Cafe</a>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

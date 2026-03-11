@@ -1,0 +1,14 @@
+{
+  "name": "detroit-shows-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node index.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2",
+    "cheerio": "^1",
+    "puppeteer": "^24"
+  }
+}

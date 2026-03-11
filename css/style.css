@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --border: #222;
+  --text: #d4d4d4;
+  --text-muted: #737373;
+  --accent: #c8a86e;
+  --accent-dim: #8b6f3a;
+  --trinosophes: #5b8a72;
+  --moondog: #7a6ea8;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.25rem;
+}
+
+/* Venue filter buttons */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-btn {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.35rem 1rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.filter-btn.active {
+  color: var(--accent);
+  border-color: var(--accent-dim);
+}
+
+/* Main event list */
+main {
+  flex: 1;
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.loading {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+  letter-spacing: 0.15em;
+}
+
+.no-events {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 3rem 0;
+}
+
+/* Date group */
+.date-group {
+  margin-bottom: 2rem;
+}
+
+.date-heading {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Individual event */
+.event {
+  padding: 0.6rem 0;
+}
+
+.event + .event {
+  border-top: 1px solid var(--border);
+}
+
+.event-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.event-description {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.event-venue {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  margin-top: 0.35rem;
+  border: 1px solid;
+}
+
+.event-venue[data-venue="trinosophes"] {
+  color: var(--trinosophes);
+  border-color: var(--trinosophes);
+}
+
+.event-venue[data-venue="moondog"] {
+  color: var(--moondog);
+  border-color: var(--moondog);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+footer a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  main {
+    padding: 1rem 0.75rem;
+  }
+}
