@@ -13,14 +13,13 @@
     moondog: "https://www.moondogcafedetroit.com/calendar",
   };
 
+  const filtersContainer = document.getElementById("filters");
   const eventsContainer = document.getElementById("events");
   let allEvents = [];
   let activeVenue = "all";
 
-  // --- Supabase client ---
   const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  // --- Fetch events ---
   async function fetchEvents() {
     const today = new Date().toISOString().slice(0, 10);
     const { data, error } = await sb
@@ -37,10 +36,32 @@
     }
 
     allEvents = data || [];
+    buildFilters();
     render();
   }
 
-  // --- Render ---
+  function buildFilters() {
+    const venues = [...new Set(allEvents.map((e) => e.venue))].sort();
+
+    let html = '<button class="filter-btn active" data-venue="all">All</button>';
+    for (const v of venues) {
+      const label = VENUE_LABELS[v] || v;
+      html += `<button class="filter-btn" data-venue="${esc(v)}">${esc(label)}</button>`;
+    }
+    filtersContainer.innerHTML = html;
+
+    filtersContainer.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filtersContainer
+          .querySelectorAll(".filter-btn")
+          .forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeVenue = btn.dataset.venue;
+        render();
+      });
+    });
+  }
+
   function render() {
     const filtered =
       activeVenue === "all"
@@ -53,7 +74,6 @@
       return;
     }
 
-    // Group by date
     const groups = new Map();
     for (const ev of filtered) {
       const key = ev.event_date || "TBD";
@@ -72,7 +92,8 @@
           html += `<div class="event-description">${esc(ev.description)}</div>`;
         }
         const venueUrl = ev.venue_url || DEFAULT_VENUE_URLS[ev.venue] || "#";
-        html += `<a href="${esc(venueUrl)}" target="_blank" rel="noopener" class="event-venue" data-venue="${esc(ev.venue)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</a>`;
+        const venueKey = VENUE_LABELS[ev.venue] ? ev.venue : "manual";
+        html += `<a href="${esc(venueUrl)}" target="_blank" rel="noopener" class="event-venue" data-venue="${esc(venueKey)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</a>`;
         html += `</div>`;
       }
       html += `</section>`;
@@ -81,7 +102,6 @@
     eventsContainer.innerHTML = html;
   }
 
-  // --- Utilities ---
   function formatDate(iso) {
     if (iso === "TBD") return "Date TBD";
     const [y, m, d] = iso.split("-").map(Number);
@@ -98,18 +118,5 @@
     return el.innerHTML;
   }
 
-  // --- Filter buttons ---
-  document.querySelectorAll(".filter-btn").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document
-        .querySelectorAll(".filter-btn")
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      activeVenue = btn.dataset.venue;
-      render();
-    });
-  });
-
-  // --- Init ---
   fetchEvents();
 })();
