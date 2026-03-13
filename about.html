@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Detroit Shows</title>
-  <meta name="description" content="Upcoming experimental and improvised music concerts in Detroit">
+  <title>About &mdash; Detroit LIVE</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,19 +12,23 @@
     <h1><a href="/">Detroit LIVE</a></h1>
     <p class="subtitle">Creative music events in Detroit.</p>
     <nav class="site-nav">
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <nav class="filters">
-    <button class="filter-btn active" data-venue="all">All</button>
-    <button class="filter-btn" data-venue="trinosophes">Trinosophes</button>
-    <button class="filter-btn" data-venue="moondog">Moondog Cafe</button>
-  </nav>
-
-  <main id="events">
-    <div class="loading">loading&hellip;</div>
+  <main class="page-content">
+    <h2>About</h2>
+    <p>
+      This site serves as a curated calendar of live music events in the Detroit area,
+      with a focus on experimental, improvisational, and boldly adventurous performances.
+      It's a labor of love, and your support helps keep it going - if you'd like to
+      contribute, <a href="https://buymeacoffee.com/jonathanja7" target="_blank" rel="noopener">you can donate here.</a>
+    </p>
+    <p>
+      If you have an event you'd like to see listed, please reach out
+      <a href="contact.html">using the contact form.</a>
+    </p>
   </main>
 
   <footer>
@@ -36,9 +39,5 @@
     </p>
     <p><a href="https://buymeacoffee.com/jonathanja7" target="_blank" rel="noopener">buy me a coffee</a></p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-  <script src="js/config.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>

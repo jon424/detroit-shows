@@ -23,3 +23,20 @@ CREATE POLICY "Allow public read access"
   FOR SELECT
   TO anon
   USING (true);
+
+-- Contact form messages
+CREATE TABLE messages (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+
+ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Allow public insert"
+  ON messages
+  FOR INSERT
+  TO anon
+  WITH CHECK (true);

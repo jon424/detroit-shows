@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &mdash; Detroit LIVE</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Detroit LIVE</a></h1>
+    <p class="subtitle">Creative music events in Detroit.</p>
+    <nav class="site-nav">
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <h2>Contact</h2>
+    <p>Have an event to submit or a question? Send a message below.</p>
+
+    <form class="contact-form" id="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send</button>
+      <p class="form-status" id="form-status"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>
+      Sources:
+      <a href="https://trinosophes.com/Events" target="_blank" rel="noopener">Trinosophes</a> &middot;
+      <a href="https://www.moondogcafedetroit.com/calendar" target="_blank" rel="noopener">Moondog Cafe</a>
+    </p>
+    <p><a href="https://buymeacoffee.com/jonathanja7" target="_blank" rel="noopener">buy me a coffee</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script>
+    (function () {
+      var sb = window.supabase.createClient(CONFIG.SUPABASE_URL, CONFIG.SUPABASE_ANON_KEY);
+      var form = document.getElementById("contact-form");
+      var status = document.getElementById("form-status");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        status.textContent = "sending\u2026";
+        status.className = "form-status";
+
+        var { error } = await sb.from("messages").insert({
+          name: form.name.value.trim(),
+          email: form.email.value.trim(),
+          message: form.message.value.trim(),
+        });
+
+        if (error) {
+          status.textContent = "Something went wrong. Please try again.";
+          status.classList.add("error");
+        } else {
+          status.textContent = "Message sent. Thank you!";
+          status.classList.add("success");
+          form.reset();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
