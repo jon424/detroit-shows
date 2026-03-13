@@ -9,6 +9,7 @@ CREATE TABLE events (
   event_date DATE,
   start_time TIME,
   source_url TEXT,
+  venue_url TEXT,
   scraped_at TIMESTAMPTZ DEFAULT now(),
   UNIQUE(venue, title, event_date)
 );

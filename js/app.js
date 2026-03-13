@@ -8,6 +8,11 @@
     moondog: "Moondog Cafe",
   };
 
+  const DEFAULT_VENUE_URLS = {
+    trinosophes: "https://trinosophes.com/Events",
+    moondog: "https://www.moondogcafedetroit.com/calendar",
+  };
+
   const eventsContainer = document.getElementById("events");
   let allEvents = [];
   let activeVenue = "all";
@@ -66,7 +71,8 @@
         if (ev.description) {
           html += `<div class="event-description">${esc(ev.description)}</div>`;
         }
-        html += `<span class="event-venue" data-venue="${esc(ev.venue)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</span>`;
+        const venueUrl = ev.venue_url || DEFAULT_VENUE_URLS[ev.venue] || "#";
+        html += `<a href="${esc(venueUrl)}" target="_blank" rel="noopener" class="event-venue" data-venue="${esc(ev.venue)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</a>`;
         html += `</div>`;
       }
       html += `</section>`;

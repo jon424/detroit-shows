@@ -121,6 +121,7 @@ export async function scrapeTrinosophes() {
       description,
       event_date: dateStr,
       source_url: "https://trinosophes.com/Events",
+      venue_url: "https://trinosophes.com/Events",
     });
   }
 

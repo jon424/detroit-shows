@@ -78,6 +78,7 @@ export async function scrapeMoondog() {
         event_date: date,
         start_time: time,
         source_url: "https://www.moondogcafedetroit.com/calendar",
+        venue_url: "https://www.moondogcafedetroit.com/calendar",
       };
     })
     .filter((e) => e.title && e.event_date && e.event_date >= today);

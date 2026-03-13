@@ -16,6 +16,7 @@
   --accent-dim: #8b6f3a;
   --trinosophes: #5b8a72;
   --moondog: #7a6ea8;
+  --hellorecords: coral
 }
 
 html {
@@ -183,11 +184,22 @@ main {
   padding: 0.15rem 0.45rem;
   margin-top: 0.35rem;
   border: 1px solid;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.event-venue:hover {
+  opacity: 0.7;
 }
 
 .event-venue[data-venue="trinosophes"] {
   color: var(--trinosophes);
   border-color: var(--trinosophes);
+}
+
+.event-venue[data-venue="Hello Records"] {
+  color: var(--hellorecords);
+  border-color: var(--hellorecords);
 }
 
 .event-venue[data-venue="moondog"] {
