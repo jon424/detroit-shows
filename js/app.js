@@ -92,8 +92,7 @@
           html += `<div class="event-description">${esc(ev.description)}</div>`;
         }
         const venueUrl = ev.venue_url || DEFAULT_VENUE_URLS[ev.venue] || "#";
-        const venueKey = VENUE_LABELS[ev.venue] ? ev.venue : "manual";
-        html += `<a href="${esc(venueUrl)}" target="_blank" rel="noopener" class="event-venue" data-venue="${esc(venueKey)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</a>`;
+        html += `<a href="${esc(venueUrl)}" target="_blank" rel="noopener" class="event-venue" data-venue="${esc(ev.venue)}">${esc(VENUE_LABELS[ev.venue] || ev.venue)}</a>`;
         html += `</div>`;
       }
       html += `</section>`;

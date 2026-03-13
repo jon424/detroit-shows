@@ -16,7 +16,7 @@
   --accent-dim: #8b6f3a;
   --trinosophes: #5b8a72;
   --moondog: #7a6ea8;
-  --hellorecords: coral
+  --hello-records: coral;
 }
 
 html {
@@ -197,14 +197,14 @@ main {
   border-color: var(--trinosophes);
 }
 
-.event-venue[data-venue="Hello Records"] {
-  color: var(--hellorecords);
-  border-color: var(--hellorecords);
-}
-
 .event-venue[data-venue="moondog"] {
   color: var(--moondog);
   border-color: var(--moondog);
+}
+
+.event-venue[data-venue="Hello Records"] {
+  color: var(--hello-records);
+  border-color: var(--hello-records);
 }
 
 /* Page content (About, Contact) */
