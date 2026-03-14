@@ -18,6 +18,9 @@
   --moondog: #7a6ea8;
   --hello-records: coral;
   --ziggys: rgb(216, 59, 59);
+  --gingko: rgb(26, 107, 26);
+  --wyrd-byrd: rgb(232, 152, 2);
+  --detroit-library: rgb(124, 124, 0);
 }
 
 html {
@@ -228,6 +231,21 @@ main {
 .event-venue[data-venue="Ziggy's"] {
   color: var(--ziggys);
   border-color: var(--ziggys);
+}
+
+.event-venue[data-venue="Gingko Records"] {
+  color: var(--gingko);
+  border-color: var(--gingko);
+}
+
+.event-venue[data-venue="Wyrd Byrd"] {
+  color: var(--wyrd-byrd);
+  border-color: var(--wyrd-byrd);
+}
+
+.event-venue[data-venue="Detroit Public Library"] {
+  color: var(--detroit-library);
+  border-color: var(--detroit-library);
 }
 
 /* Page content (About, Contact) */
