@@ -14,9 +14,15 @@
   };
 
   const filtersContainer = document.getElementById("filters");
+  const filterList = document.getElementById("filter-list");
+  const hamburger = document.getElementById("hamburger");
   const eventsContainer = document.getElementById("events");
   let allEvents = [];
   let activeVenue = "all";
+
+  hamburger.addEventListener("click", () => {
+    filtersContainer.classList.toggle("open");
+  });
 
   const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
@@ -48,15 +54,16 @@
       const label = VENUE_LABELS[v] || v;
       html += `<button class="filter-btn" data-venue="${esc(v)}">${esc(label)}</button>`;
     }
-    filtersContainer.innerHTML = html;
+    filterList.innerHTML = html;
 
-    filtersContainer.querySelectorAll(".filter-btn").forEach((btn) => {
+    filterList.querySelectorAll(".filter-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
-        filtersContainer
+        filterList
           .querySelectorAll(".filter-btn")
           .forEach((b) => b.classList.remove("active"));
         btn.classList.add("active");
         activeVenue = btn.dataset.venue;
+        filtersContainer.classList.remove("open");
         render();
       });
     });

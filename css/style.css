@@ -17,6 +17,7 @@
   --trinosophes: #5b8a72;
   --moondog: #7a6ea8;
   --hello-records: coral;
+  --ziggys: rgb(216, 59, 59);
 }
 
 html {
@@ -94,12 +95,21 @@ header h1 a {
 
 /* Venue filter buttons */
 .filters {
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.hamburger {
+  display: none;
+}
+
+.filter-list {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   padding: 1.25rem 1rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
+  flex-wrap: wrap;
 }
 
 .filter-btn {
@@ -213,6 +223,11 @@ main {
 .event-venue[data-venue="Hello Records"] {
   color: var(--hello-records);
   border-color: var(--hello-records);
+}
+
+.event-venue[data-venue="Ziggy's"] {
+  color: var(--ziggys);
+  border-color: var(--ziggys);
 }
 
 /* Page content (About, Contact) */
@@ -348,8 +363,39 @@ footer a:hover {
     font-size: 1.4rem;
   }
 
-  .filters {
-    flex-wrap: wrap;
+  .hamburger {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 0.1em;
+    transition: color 0.15s ease;
+  }
+
+  .hamburger:hover {
+    color: var(--text);
+  }
+
+  .filter-list {
+    display: none;
+    flex-direction: column;
+    padding: 0.75rem 1rem;
+    gap: 0.35rem;
+  }
+
+  .filters.open .filter-list {
+    display: flex;
+  }
+
+  .filter-btn {
+    text-align: left;
+    width: 100%;
   }
 
   main {
