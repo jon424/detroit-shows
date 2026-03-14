@@ -33,6 +33,13 @@ body {
   flex-direction: column;
 }
 
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--bg);
+}
+
 header {
   text-align: center;
   padding: 2.5rem 1rem 1rem;
@@ -92,6 +99,7 @@ header h1 a {
   gap: 0.5rem;
   padding: 1.25rem 1rem;
   border-bottom: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .filter-btn {
