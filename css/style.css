@@ -21,6 +21,7 @@
   --gingko: rgb(26, 107, 26);
   --wyrd-byrd: rgb(232, 152, 2);
   --detroit-library: rgb(124, 124, 0);
+  --parts-and-labor: rgb(7, 78, 171);
 }
 
 html {
@@ -236,6 +237,11 @@ main {
 .event-venue[data-venue="Gingko Records"] {
   color: var(--gingko);
   border-color: var(--gingko);
+}
+
+.event-venue[data-venue="Parts & Labor"] {
+  color: var(--parts-and-labor);
+  border-color: var(--parts-and-labor);
 }
 
 .event-venue[data-venue="Wyrd Byrd"] {
