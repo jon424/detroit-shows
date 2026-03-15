@@ -22,6 +22,7 @@
   --wyrd-byrd: rgb(232, 152, 2);
   --detroit-library: rgb(124, 124, 0);
   --parts-and-labor: rgb(109, 150, 205);
+  --high-dive: rgb(196, 67, 189);
 }
 
 html {
@@ -247,6 +248,11 @@ main {
 .event-venue[data-venue="Wyrd Byrd"] {
   color: var(--wyrd-byrd);
   border-color: var(--wyrd-byrd);
+}
+
+.event-venue[data-venue="High Dive"] {
+  color: var(--high-dive);
+  border-color: var(--high-dive);
 }
 
 .event-venue[data-venue="Detroit Public Library"] {
