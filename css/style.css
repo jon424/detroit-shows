@@ -26,6 +26,7 @@
   --blue-llama: rgb(4, 4, 255);
   --third-man: rgb(127, 218, 71);
   --ghost-light: rgb(152, 152, 152);
+  --paris-bar: pink;
 }
 
 html {
@@ -276,6 +277,11 @@ main {
 .event-venue[data-venue="Ghost Light Bar"] {
   color: var(--ghost-light);
   border-color: var(--ghost-light);
+}
+
+.event-venue[data-venue="Paris Bar"] {
+  color: var(--paris-bar);
+  border-color: var(--paris-bar);
 }
 
 /* Page content (About, Contact) */
