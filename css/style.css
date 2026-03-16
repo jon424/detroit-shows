@@ -27,6 +27,7 @@
   --third-man: rgb(127, 218, 71);
   --ghost-light: rgb(152, 152, 152);
   --paris-bar: pink;
+  --detroit-design-center: rgb(219, 217, 217);
 }
 
 html {
@@ -282,6 +283,11 @@ main {
 .event-venue[data-venue="Paris Bar"] {
   color: var(--paris-bar);
   border-color: var(--paris-bar);
+}
+
+.event-venue[data-venue="Detroit Design Center"] {
+  color: var(--detroit-design-center);
+  border-color: var(--detroit-design-center);
 }
 
 /* Page content (About, Contact) */
