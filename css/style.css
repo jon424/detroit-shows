@@ -25,6 +25,7 @@
   --high-dive: rgb(196, 67, 189);
   --blue-llama: rgb(4, 4, 255);
   --third-man: rgb(127, 218, 71);
+  --ghost-light: rgb(152, 152, 152);
 }
 
 html {
@@ -270,6 +271,11 @@ main {
 .event-venue[data-venue="Third Man Records"] {
   color: var(--third-man);
   border-color: var(--third-man);
+}
+
+.event-venue[data-venue="Ghost Light Bar"] {
+  color: var(--ghost-light);
+  border-color: var(--ghost-light);
 }
 
 /* Page content (About, Contact) */
