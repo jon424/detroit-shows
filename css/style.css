@@ -28,6 +28,7 @@
   --ghost-light: rgb(152, 152, 152);
   --paris-bar: pink;
   --detroit-design-center: rgb(219, 217, 217);
+  --new-music-detroit: gold;
 }
 
 html {
@@ -132,14 +133,18 @@ header h1 a {
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: all 0.15s ease;
+  opacity: 0.5;
 }
 
 .filter-btn:hover {
-  color: var(--text);
-  border-color: var(--text-muted);
+  opacity: 0.8;
 }
 
 .filter-btn.active {
+  opacity: 1;
+}
+
+.filter-btn[data-venue="all"] {
   color: var(--accent);
   border-color: var(--accent-dim);
 }
@@ -220,72 +225,92 @@ main {
   opacity: 0.7;
 }
 
-.event-venue[data-venue="trinosophes"] {
+.event-venue[data-venue="trinosophes"],
+.filter-btn[data-venue="trinosophes"] {
   color: var(--trinosophes);
   border-color: var(--trinosophes);
 }
 
-.event-venue[data-venue="moondog"] {
+.event-venue[data-venue="New Music Detroit"],
+.filter-btn[data-venue="New Music Detroit"] {
+  color: var(--new-music-detroit);
+  border-color: var(--new-music-detroit);
+}
+
+.event-venue[data-venue="moondog"],
+.filter-btn[data-venue="moondog"] {
   color: var(--moondog);
   border-color: var(--moondog);
 }
 
-.event-venue[data-venue="Hello Records"] {
+.event-venue[data-venue="Hello Records"],
+.filter-btn[data-venue="Hello Records"] {
   color: var(--hello-records);
   border-color: var(--hello-records);
 }
 
-.event-venue[data-venue="Ziggy's"] {
+.event-venue[data-venue="Ziggy's"],
+.filter-btn[data-venue="Ziggy's"] {
   color: var(--ziggys);
   border-color: var(--ziggys);
 }
 
-.event-venue[data-venue="Gingko Records"] {
+.event-venue[data-venue="Gingko Records"],
+.filter-btn[data-venue="Gingko Records"] {
   color: var(--gingko);
   border-color: var(--gingko);
 }
 
-.event-venue[data-venue="Parts & Labor"] {
+.event-venue[data-venue="Parts & Labor"],
+.filter-btn[data-venue="Parts & Labor"] {
   color: var(--parts-and-labor);
   border-color: var(--parts-and-labor);
 }
 
-.event-venue[data-venue="Wyrd Byrd"] {
+.event-venue[data-venue="Wyrd Byrd"],
+.filter-btn[data-venue="Wyrd Byrd"] {
   color: var(--wyrd-byrd);
   border-color: var(--wyrd-byrd);
 }
 
-.event-venue[data-venue="High Dive"] {
+.event-venue[data-venue="High Dive"],
+.filter-btn[data-venue="High Dive"] {
   color: var(--high-dive);
   border-color: var(--high-dive);
 }
 
-.event-venue[data-venue="Detroit Public Library"] {
+.event-venue[data-venue="Detroit Public Library"],
+.filter-btn[data-venue="Detroit Public Library"] {
   color: var(--detroit-library);
   border-color: var(--detroit-library);
 }
 
-.event-venue[data-venue="The Blue Llama"] {
+.event-venue[data-venue="The Blue Llama"],
+.filter-btn[data-venue="The Blue Llama"] {
   color: var(--blue-llama);
   border-color: var(--blue-llama);
 }
 
-.event-venue[data-venue="Third Man Records"] {
+.event-venue[data-venue="Third Man Records"],
+.filter-btn[data-venue="Third Man Records"] {
   color: var(--third-man);
   border-color: var(--third-man);
 }
 
-.event-venue[data-venue="Ghost Light Bar"] {
+.event-venue[data-venue="Ghost Light Bar"],
+.filter-btn[data-venue="Ghost Light Bar"] {
   color: var(--ghost-light);
   border-color: var(--ghost-light);
 }
 
-.event-venue[data-venue="Paris Bar"] {
+.event-venue[data-venue="Paris Bar"],
+.filter-btn[data-venue="Paris Bar"] {
   color: var(--paris-bar);
   border-color: var(--paris-bar);
 }
 
-.event-venue[data-venue="Detroit Design Center"] {
+.event-venue[data-venue="Detroit Design Center"],
+.filter-btn[data-venue="Detroit Design Center"] {
   color: var(--detroit-design-center);
   border-color: var(--detroit-design-center);
 }
