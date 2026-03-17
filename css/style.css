@@ -29,6 +29,7 @@
   --paris-bar: pink;
   --detroit-design-center: rgb(219, 217, 217);
   --new-music-detroit: gold;
+  --motor-city-wine: rgb(155, 0, 0);
 }
 
 html {
@@ -295,6 +296,12 @@ main {
 .filter-btn[data-venue="Third Man Records"] {
   color: var(--third-man);
   border-color: var(--third-man);
+}
+
+.event-venue[data-venue="Motor City Wine"],
+.filter-btn[data-venue="Motor City Wine"] {
+  color: var(--motor-city-wine);
+  border-color: var(--motor-city-wine);
 }
 
 .event-venue[data-venue="Ghost Light Bar"],
