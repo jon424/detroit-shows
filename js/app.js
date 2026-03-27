@@ -47,7 +47,9 @@
   }
 
   function buildFilters() {
-    const venues = [...new Set(allEvents.map((e) => e.venue))].sort();
+    const venues = [...new Set(allEvents.map((e) => e.venue))].sort((a, b) =>
+      (VENUE_LABELS[a] || a).localeCompare(VENUE_LABELS[b] || b)
+    );
 
     let html = '<button class="filter-btn active" data-venue="all">All</button>';
     for (const v of venues) {
