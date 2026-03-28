@@ -96,7 +96,8 @@
       html += `<h2 class="date-heading">${formatDate(date)}</h2>`;
       for (const ev of events) {
         html += `<div class="event">`;
-        html += `<div class="event-title">${esc(ev.title)}</div>`;
+        const titleUrl = ev.venue_url || DEFAULT_VENUE_URLS[ev.venue] || "#";
+        html += `<a href="${esc(titleUrl)}" target="_blank" rel="noopener" class="event-title">${esc(ev.title)}</a>`;
         if (ev.description) {
           html += `<div class="event-description">${esc(ev.description)}</div>`;
         }
