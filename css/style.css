@@ -30,6 +30,7 @@
   --detroit-design-center: rgb(219, 217, 217);
   --new-music-detroit: gold;
   --motor-city-wine: rgb(155, 0, 0);
+  --the-shepherd: whitesmoke;
 }
 
 html {
@@ -197,10 +198,17 @@ main {
 }
 
 .event-title {
+  display: block;
   font-size: 1rem;
   font-weight: 400;
   color: var(--text);
   line-height: 1.4;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.event-title:hover {
+  color: var(--accent);
 }
 
 .event-description {
@@ -314,6 +322,12 @@ main {
 .filter-btn[data-venue="Paris Bar"] {
   color: var(--paris-bar);
   border-color: var(--paris-bar);
+}
+
+.event-venue[data-venue="The Shepherd"],
+.filter-btn[data-venue="The Shepherd"] {
+  color: var(--the-shepherd);
+  border-color: var(--the-shepherd);
 }
 
 .event-venue[data-venue="Detroit Design Center"],
