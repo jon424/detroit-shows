@@ -31,6 +31,7 @@
   --new-music-detroit: gold;
   --motor-city-wine: rgb(155, 0, 0);
   --the-shepherd: whitesmoke;
+  --outer-limits: limegreen;
 }
 
 html {
@@ -304,6 +305,12 @@ main {
 .filter-btn[data-venue="Third Man Records"] {
   color: var(--third-man);
   border-color: var(--third-man);
+}
+
+.event-venue[data-venue="Outer Limits"],
+.filter-btn[data-venue="Outer Limits"] {
+  color: var(--outer-limits);
+  border-color: var(--outer-limits);
 }
 
 .event-venue[data-venue="Motor City Wine"],
