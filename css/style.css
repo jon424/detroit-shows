@@ -32,6 +32,7 @@
   --motor-city-wine: rgb(155, 0, 0);
   --the-shepherd: whitesmoke;
   --outer-limits: limegreen;
+  --dissonant-works: rgb(252, 249, 226);
 }
 
 html {
@@ -311,6 +312,12 @@ main {
 .filter-btn[data-venue="Outer Limits"] {
   color: var(--outer-limits);
   border-color: var(--outer-limits);
+}
+
+.event-venue[data-venue="Dissonant Works"],
+.filter-btn[data-venue="Dissonant Works"] {
+  color: var(--dissonant-works);
+  border-color: var(--dissonant-works);
 }
 
 .event-venue[data-venue="Motor City Wine"],
