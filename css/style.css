@@ -33,6 +33,7 @@
   --the-shepherd: whitesmoke;
   --outer-limits: limegreen;
   --dissonant-works: rgb(252, 249, 226);
+  --spread-art: rgb(103, 251, 231);
 }
 
 html {
@@ -288,6 +289,12 @@ main {
 .filter-btn[data-venue="High Dive"] {
   color: var(--high-dive);
   border-color: var(--high-dive);
+}
+
+.event-venue[data-venue="Spread Art"],
+.filter-btn[data-venue="Spread Art"] {
+  color: var(--spread-art);
+  border-color: var(--spread-art);
 }
 
 .event-venue[data-venue="Detroit Public Library"],
