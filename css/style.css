@@ -34,6 +34,8 @@
   --outer-limits: limegreen;
   --dissonant-works: rgb(252, 249, 226);
   --spread-art: rgb(103, 251, 231);
+  --shaver-recital-hall: #0c5449;
+  --the-american-riad: silver;
 }
 
 html {
@@ -295,6 +297,18 @@ main {
 .filter-btn[data-venue="Spread Art"] {
   color: var(--spread-art);
   border-color: var(--spread-art);
+}
+
+.event-venue[data-venue="Shaver Recital Hall"],
+.filter-btn[data-venue="Shaver Recital Hall"] {
+  color: var(--shaver-recital-hall);
+  border-color: var(--shaver-recital-hall);
+}
+
+.event-venue[data-venue="The American Riad"],
+.filter-btn[data-venue="The American Riad"] {
+  color: var(--the-american-riad);
+  border-color: var(--the-american-riad);
 }
 
 .event-venue[data-venue="Detroit Public Library"],
