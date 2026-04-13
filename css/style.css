@@ -36,6 +36,7 @@
   --spread-art: rgb(103, 251, 231);
   --shaver-recital-hall: #0c5449;
   --the-american-riad: silver;
+  --packard-art-collective: rgb(9, 180, 128);
 }
 
 html {
@@ -273,6 +274,12 @@ main {
 .filter-btn[data-venue="Gingko Records"] {
   color: var(--gingko);
   border-color: var(--gingko);
+}
+
+.event-venue[data-venue="Packard Art Collective"],
+.filter-btn[data-venue="Packard Art Collective"] {
+  color: var(--packard-art-collective);
+  border-color: var(--packard-art-collective);
 }
 
 .event-venue[data-venue="Parts & Labor"],
