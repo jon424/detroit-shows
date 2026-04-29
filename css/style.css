@@ -37,6 +37,7 @@
   --shaver-recital-hall: #0c5449;
   --the-american-riad: silver;
   --packard-art-collective: rgb(9, 180, 128);
+  --cliff-bells: rgb(240, 255, 75);
 }
 
 html {
@@ -322,6 +323,12 @@ main {
 .filter-btn[data-venue="Detroit Public Library"] {
   color: var(--detroit-library);
   border-color: var(--detroit-library);
+}
+
+.event-venue[data-venue="Cliff Bell's"],
+.filter-btn[data-venue="Cliff Bell's"] {
+  color: var(--cliff-bells);
+  border-color: var(--cliff-bells);
 }
 
 .event-venue[data-venue="The Blue Llama"],
