@@ -37,6 +37,7 @@
   --the-american-riad: silver;
   --packard-art-collective: rgb(9, 180, 128);
   --cliff-bells: rgb(240, 255, 75);
+  --arethas: rgb(219, 10, 10);
 }
 
 html {
@@ -312,6 +313,13 @@ main {
   border-color: var(--shaver-recital-hall);
 }
 
+
+.event-venue[data-venue="Aretha's Jazz Cafe"],
+.filter-btn[data-venue="Aretha's Jazz Cafe"] {
+  color: var(--arethas);
+  border-color: var(--arethas);
+}
+
 .event-venue[data-venue="The American Riad"],
 .filter-btn[data-venue="The American Riad"] {
   color: var(--the-american-riad);
@@ -353,6 +361,8 @@ main {
   color: var(--motor-city-wine);
   border-color: var(--motor-city-wine);
 }
+
+
 
 .event-venue[data-venue="Ghost Light Bar"],
 .filter-btn[data-venue="Ghost Light Bar"] {
