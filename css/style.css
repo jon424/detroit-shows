@@ -38,6 +38,7 @@
   --packard-art-collective: rgb(9, 180, 128);
   --cliff-bells: rgb(240, 255, 75);
   --arethas: rgb(219, 10, 10);
+  --dreamland-theater: #6BA078DE
 }
 
 html {
@@ -263,6 +264,12 @@ main {
 .filter-btn[data-venue="Hello Records"] {
   color: var(--hello-records);
   border-color: var(--hello-records);
+}
+
+.event-venue[data-venue="Dreamland Theater"],
+.filter-btn[data-venue="Dreamland Theater"] {
+  color: var(--dreamland-theater);
+  border-color: var(--dreamland-theater);
 }
 
 .event-venue[data-venue="Ziggy's"],
