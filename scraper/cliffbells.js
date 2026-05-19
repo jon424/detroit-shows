@@ -41,7 +41,7 @@ export async function scrapeCliffBells() {
 
     if (title && eventDate && eventDate >= today) {
       events.push({
-        venue: "cliff_bells",
+        venue: "Cliff Bell's",
         title,
         description: price,
         event_date: eventDate,

@@ -272,6 +272,12 @@ main {
   border-color: var(--dreamland-theater);
 }
 
+.event-venue[data-venue="Cliff Bell's"],
+.filter-btn[data-venue="Cliff Bell's"] {
+  color: var(--cliff-bells);
+  border-color: var(--cliff-bells);
+}
+
 .event-venue[data-venue="Ziggy's"],
 .filter-btn[data-venue="Ziggy's"] {
   color: var(--ziggys);
@@ -337,12 +343,6 @@ main {
 .filter-btn[data-venue="Detroit Public Library"] {
   color: var(--detroit-library);
   border-color: var(--detroit-library);
-}
-
-.event-venue[data-venue="Cliff Bell's"],
-.filter-btn[data-venue="Cliff Bell's"] {
-  color: var(--cliff-bells);
-  border-color: var(--cliff-bells);
 }
 
 .event-venue[data-venue="The Blue Llama"],
