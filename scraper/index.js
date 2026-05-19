@@ -4,6 +4,7 @@ import { scrapeTrinosophes } from "./trinosophes.js";
 import { scrapeMoondog } from "./moondog.js";
 import { scrapeCliffBells } from "./cliffbells.js";
 import { scrapeBlueLlama } from "./bluellama.js";
+import { scrapeMotorCityWine } from "./motorcitywine.js";
 
 // Load .env from project root when running locally
 if (!process.env.SUPABASE_URL) {
@@ -86,6 +87,13 @@ async function main() {
     allEvents.push(...blueLlamaEvents);
   } catch (err) {
     console.error("[Blue Llama] Scraper failed:", err.message);
+  }
+
+  try {
+    const mcwEvents = await scrapeMotorCityWine();
+    allEvents.push(...mcwEvents);
+  } catch (err) {
+    console.error("[Motor City Wine] Scraper failed:", err.message);
   }
 
   if (allEvents.length === 0) {
