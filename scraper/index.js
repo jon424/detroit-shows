@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import { scrapeTrinosophes } from "./trinosophes.js";
 import { scrapeMoondog } from "./moondog.js";
 import { scrapeCliffBells } from "./cliffbells.js";
+import { scrapeBlueLlama } from "./bluellama.js";
 
 // Load .env from project root when running locally
 if (!process.env.SUPABASE_URL) {
@@ -78,6 +79,13 @@ async function main() {
     allEvents.push(...cliffBellsEvents);
   } catch (err) {
     console.error("[Cliff Bell's] Scraper failed:", err.message);
+  }
+
+  try {
+    const blueLlamaEvents = await scrapeBlueLlama();
+    allEvents.push(...blueLlamaEvents);
+  } catch (err) {
+    console.error("[Blue Llama] Scraper failed:", err.message);
   }
 
   if (allEvents.length === 0) {
