@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 import { createClient } from "@supabase/supabase-js";
 import { scrapeTrinosophes } from "./trinosophes.js";
 import { scrapeMoondog } from "./moondog.js";
+import { scrapeCliffBells } from "./cliffbells.js";
 
 // Load .env from project root when running locally
 if (!process.env.SUPABASE_URL) {
@@ -70,6 +71,13 @@ async function main() {
     allEvents.push(...moondogEvents);
   } catch (err) {
     console.error("[Moondog] Scraper failed:", err.message);
+  }
+
+  try {
+    const cliffBellsEvents = await scrapeCliffBells();
+    allEvents.push(...cliffBellsEvents);
+  } catch (err) {
+    console.error("[Cliff Bell's] Scraper failed:", err.message);
   }
 
   if (allEvents.length === 0) {
