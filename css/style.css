@@ -39,6 +39,7 @@
   --cliff-bells: rgb(240, 255, 75);
   --arethas: rgb(219, 10, 10);
   --dreamland-theater: #6BA078DE
+  --the-congregation: rgb(239, 232, 219);
 }
 
 html {
@@ -367,6 +368,12 @@ main {
 .filter-btn[data-venue="Motor City Wine"] {
   color: var(--motor-city-wine);
   border-color: var(--motor-city-wine);
+}
+
+.event-venue[data-venue="The Congregation"],
+.filter-btn[data-venue="The Congregation"] {
+  color: var(--the-congregation);
+  border-color: var(--the-congregation);
 }
 
 
