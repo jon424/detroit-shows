@@ -29,6 +29,7 @@
   --paris-bar: pink;
   --detroit-design-center: rgb(219, 217, 217);
   --new-music-detroit: gold;
+  --museum-of-contemporary-art-detroit: #00A386;
   --motor-city-wine: rgb(155, 0, 0);
   --the-shepherd: whitesmoke;
   --outer-limits: limegreen;
@@ -271,6 +272,12 @@ main {
 .filter-btn[data-venue="Dreamland Theater"] {
   color: var(--dreamland-theater);
   border-color: var(--dreamland-theater);
+}
+
+.event-venue[data-venue="Museum of Contemporary Art Detroit"],
+.filter-btn[data-venue="Museum of Contemporary Art Detroit"] {
+  color: var(--museum-of-contemporary-art-detroit);
+  border-color: var(--museum-of-contemporary-art-detroit);
 }
 
 .event-venue[data-venue="Cliff Bell's"],
