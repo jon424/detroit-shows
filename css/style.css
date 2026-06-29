@@ -41,6 +41,7 @@
   --arethas: rgb(219, 10, 10);
   --dreamland-theater: #6BA078DE
   --the-congregation: rgb(239, 232, 219);
+  --the-ear-and-the-eye: whitesmoke;
 }
 
 html {
@@ -390,6 +391,13 @@ main {
   color: var(--ghost-light);
   border-color: var(--ghost-light);
 }
+
+.event-venue[data-venue="THE EAR AND THE EYE"],
+.filter-btn[data-venue="THE EAR AND THE EYE"] {
+  color: var(--the-ear-and-the-eye);
+  border-color: var(--the-ear-and-the-eye);
+}
+
 
 .event-venue[data-venue="Paris Bar"],
 .filter-btn[data-venue="Paris Bar"] {
