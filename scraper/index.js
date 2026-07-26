@@ -109,8 +109,18 @@ async function main() {
     process.exit(0);
   }
 
-  console.log(`Total events scraped: ${allEvents.length}`);
-  await upsertEvents(allEvents);
+  // Deduplicate by conflict key (venue + title + event_date) to avoid
+  // Postgres "cannot affect row a second time" error on upsert
+  const seen = new Set();
+  const uniqueEvents = allEvents.filter((ev) => {
+    const key = `${ev.venue}||${ev.title}||${ev.event_date}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  console.log(`Total events scraped: ${allEvents.length} (${uniqueEvents.length} unique)`);
+  await upsertEvents(uniqueEvents);
   console.log("Events upserted to Supabase");
 
   await pruneOldEvents();
