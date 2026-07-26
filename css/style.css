@@ -42,6 +42,11 @@
   --dreamland-theater: #6BA078DE
   --the-congregation: rgb(239, 232, 219);
   --the-ear-and-the-eye: whitesmoke;
+  --candela: rgb(230, 100, 50);
+  --michigan-theater: rgb(80, 140, 210);
+  --the-magic-bag: rgb(170, 80, 200);
+  --magic-stick: rgb(220, 180, 50);
+  --majestic-theatre: rgb(180, 60, 120);
 }
 
 html {
@@ -415,6 +420,36 @@ main {
 .filter-btn[data-venue="Detroit Design Center"] {
   color: var(--detroit-design-center);
   border-color: var(--detroit-design-center);
+}
+
+.event-venue[data-venue="Candela"],
+.filter-btn[data-venue="Candela"] {
+  color: var(--candela);
+  border-color: var(--candela);
+}
+
+.event-venue[data-venue="Michigan Theater"],
+.filter-btn[data-venue="Michigan Theater"] {
+  color: var(--michigan-theater);
+  border-color: var(--michigan-theater);
+}
+
+.event-venue[data-venue="The Magic Bag"],
+.filter-btn[data-venue="The Magic Bag"] {
+  color: var(--the-magic-bag);
+  border-color: var(--the-magic-bag);
+}
+
+.event-venue[data-venue="Magic Stick"],
+.filter-btn[data-venue="Magic Stick"] {
+  color: var(--magic-stick);
+  border-color: var(--magic-stick);
+}
+
+.event-venue[data-venue="Majestic Theatre"],
+.filter-btn[data-venue="Majestic Theatre"] {
+  color: var(--majestic-theatre);
+  border-color: var(--majestic-theatre);
 }
 
 /* Page content (About, Contact) */

@@ -6,6 +6,11 @@
   const VENUE_LABELS = {
     trinosophes: "Trinosophes",
     moondog: "Moondog Cafe",
+    "Candela": "Candela",
+    "Michigan Theater": "Michigan Theater",
+    "The Magic Bag": "The Magic Bag",
+    "Magic Stick": "Magic Stick",
+    "Majestic Theatre": "Majestic Theatre",
   };
 
   const DEFAULT_VENUE_URLS = {
