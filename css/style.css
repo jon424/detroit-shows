@@ -47,6 +47,7 @@
   --the-magic-bag: rgb(170, 80, 200);
   --magic-stick: rgb(220, 180, 50);
   --majestic-theatre: rgb(180, 60, 120);
+  --tenacity: goldenrod;
 }
 
 html {
@@ -290,6 +291,12 @@ main {
 .filter-btn[data-venue="Cliff Bell's"] {
   color: var(--cliff-bells);
   border-color: var(--cliff-bells);
+}
+
+.event-venue[data-venue="Tenacity"],
+.filter-btn[data-venue="Tenacity"] {
+  color: var(--tenacity);
+  border-color: var(--tenacity);
 }
 
 .event-venue[data-venue="Ziggy's"],
