@@ -93,11 +93,8 @@ function buildEmailBody(events) {
   for (const [date, dayEvents] of grouped) {
     body += `### ${formatDate(date)}\n\n`;
     for (const ev of dayEvents) {
-      const time = formatTime(ev.start_time);
       const venue = venueLabel(ev.venue);
-      let line = `**${ev.title}**`;
-      if (time) line += ` — ${time}`;
-      line += ` @ ${venue}`;
+      let line = `**${ev.title}** @ ${venue}`;
       if (ev.description) line += ` _(${ev.description})_`;
       body += `${line}\n\n`;
     }
