@@ -474,8 +474,8 @@ main {
   border-color: var(--majestic-theatre);
 }
 
-.event-venue[data-venue="Kerrytown Concert House"],
-.filter-btn[data-venue="Kerrytown Concert House"] {
+.event-venue[data-venue="Kerrytown Concerthouse"],
+.filter-btn[data-venue="Kerrytown Concerthouse"] {
   color: var(--kerrytown-concert-house);
   border-color: var(--kerrytown-concert-house);
 }
