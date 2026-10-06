@@ -39,10 +39,12 @@
   --packard-art-collective: rgb(9, 180, 128);
   --cliff-bells: rgb(240, 255, 75);
   --arethas: rgb(219, 10, 10);
-  --dreamland-theater: #6BA078DE
+  --dreamland-theater: #6BA078DE;
   --the-congregation: rgb(239, 232, 219);
   --the-ear-and-the-eye: whitesmoke;
   --candela: rgb(230, 100, 50);
+  --lager-house: rgb(206, 57, 240);
+  --donovans-pub: rgb(185, 77, 5);
   --michigan-theater: rgb(80, 140, 210);
   --the-magic-bag: rgb(170, 80, 200);
   --magic-stick: rgb(220, 180, 50);
@@ -269,6 +271,12 @@ main {
   border-color: var(--moondog);
 }
 
+.event-venue[data-venue="Donovan's Pub"],
+.filter-btn[data-venue="Donovan's Pub"] {
+  color: var(--donovans-pub);
+  border-color: var(--donovans-pub);
+}
+
 .event-venue[data-venue="Hello Records"],
 .filter-btn[data-venue="Hello Records"] {
   color: var(--hello-records);
@@ -321,6 +329,12 @@ main {
 .filter-btn[data-venue="Parts & Labor"] {
   color: var(--parts-and-labor);
   border-color: var(--parts-and-labor);
+}
+
+.event-venue[data-venue="Lager House"],
+.filter-btn[data-venue="Lager House"] {
+  color: var(--lager-house);
+  border-color: var(--lager-house);
 }
 
 .event-venue[data-venue="Wyrd Byrd"],
