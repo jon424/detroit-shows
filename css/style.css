@@ -30,6 +30,7 @@
   --detroit-design-center: rgb(219, 217, 217);
   --new-music-detroit: gold;
   --museum-of-contemporary-art-detroit: #00A386;
+  --kerrytown-concert-house: #cf2e2e;
   --motor-city-wine: rgb(155, 0, 0);
   --the-shepherd: whitesmoke;
   --outer-limits: limegreen;
@@ -471,6 +472,12 @@ main {
 .filter-btn[data-venue="Majestic Theatre"] {
   color: var(--majestic-theatre);
   border-color: var(--majestic-theatre);
+}
+
+.event-venue[data-venue="Kerrytown Concert House"],
+.filter-btn[data-venue="Kerrytown Concert House"] {
+  color: var(--kerrytown-concert-house);
+  border-color: var(--kerrytown-concert-house);
 }
 
 /* Page content (About, Contact) */
