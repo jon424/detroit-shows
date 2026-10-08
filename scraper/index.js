@@ -5,7 +5,7 @@ import { scrapeMoondog } from "./moondog.js";
 import { scrapeCliffBells } from "./cliffbells.js";
 import { scrapeBlueLlama } from "./bluellama.js";
 import { scrapeMotorCityWine } from "./motorcitywine.js";
-import { scrapeMichiganHappenings } from "./michiganhappenings.js";
+// import { scrapeMichiganHappenings } from "./michiganhappenings.js";
 
 // Load .env from project root when running locally
 if (!process.env.SUPABASE_URL) {
@@ -97,12 +97,12 @@ async function main() {
     console.error("[Motor City Wine] Scraper failed:", err.message);
   }
 
-  try {
-    const mhEvents = await scrapeMichiganHappenings();
-    allEvents.push(...mhEvents);
-  } catch (err) {
-    console.error("[Michigan Happenings] Scraper failed:", err.message);
-  }
+  // try {
+  //   const mhEvents = await scrapeMichiganHappenings();
+  //   allEvents.push(...mhEvents);
+  // } catch (err) {
+  //   console.error("[Michigan Happenings] Scraper failed:", err.message);
+  // }
 
   if (allEvents.length === 0) {
     console.log("No events scraped. Exiting.");
