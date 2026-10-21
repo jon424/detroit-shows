@@ -51,6 +51,7 @@
   --magic-stick: rgb(220, 180, 50);
   --majestic-theatre: rgb(180, 60, 120);
   --tenacity: goldenrod;
+  --royal-oak-music-theatre: rgba(88, 20, 20, 0.685);
 }
 
 html {
@@ -472,6 +473,12 @@ main {
 .filter-btn[data-venue="Majestic Theatre"] {
   color: var(--majestic-theatre);
   border-color: var(--majestic-theatre);
+}
+
+.event-venue[data-venue="Royal Oak Music Theatre"],
+.filter-btn[data-venue="Royal Oak Music Theatre"] {
+  color: var(--royal-oak-music-theatre);
+  border-color: var(--royal-oak-music-theatre);
 }
 
 .event-venue[data-venue="Kerrytown Concerthouse"],
