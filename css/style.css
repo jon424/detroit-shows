@@ -52,6 +52,7 @@
   --majestic-theatre: rgb(180, 60, 120);
   --tenacity: goldenrod;
   --royal-oak-music-theatre: crimson;
+  --painted-lady-lounge: rgba(230, 65, 175, .41);
 }
 
 /* Light mode overrides */
@@ -78,6 +79,7 @@
 
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -342,6 +344,12 @@ main {
 .filter-btn[data-venue="Museum of Contemporary Art Detroit"] {
   color: var(--museum-of-contemporary-art-detroit);
   border-color: var(--museum-of-contemporary-art-detroit);
+}
+
+.event-venue[data-venue="Painted Lady Lounge"],
+.filter-btn[data-venue="Painted Lady Lounge"] {
+  color: var(--painted-lady-lounge);
+  border-color: var(--painted-lady-lounge);
 }
 
 .event-venue[data-venue="Cliff Bell's"],
