@@ -53,6 +53,7 @@
   --tenacity: goldenrod;
   --royal-oak-music-theatre: crimson;
   --painted-lady-lounge: rgba(230, 65, 175, .41);
+  --detroit-opera-house: rgb(0, 170, 204);
 }
 
 /* Light mode overrides */
@@ -435,6 +436,12 @@ main {
 .filter-btn[data-venue="Detroit Public Library"] {
   color: var(--detroit-library);
   border-color: var(--detroit-library);
+}
+
+.event-venue[data-venue="Detroit Opera House"],
+.filter-btn[data-venue="Detroit Opera House"] {
+  color: var(--detroit-opera-house);
+  border-color: var(--detroit-opera-house);
 }
 
 .event-venue[data-venue="The Blue Llama"],
