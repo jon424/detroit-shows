@@ -54,6 +54,28 @@
   --royal-oak-music-theatre: crimson;
 }
 
+/* Light mode overrides */
+[data-theme="light"] {
+  --bg: #f5f3f0;
+  --surface: #eae7e3;
+  --border: #d4d0cb;
+  --text: #1a1a1a;
+  --text-muted: #6b6560;
+  --accent: #8b6b2e;
+  --accent-dim: #b89860;
+
+  /* Adjust venue colors that are too light on white */
+  --the-shepherd: #555;
+  --the-ear-and-the-eye: #555;
+  --the-american-riad: #777;
+  --detroit-design-center: #666;
+  --the-congregation: #8a7e6f;
+  --ghost-light: #666;
+  --cliff-bells: #9a9b00;
+  --new-music-detroit: #b8860b;
+  --paris-bar: #d45d79;
+}
+
 html {
   font-size: 16px;
 }
@@ -76,6 +98,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 2.5rem 1rem 1rem;
   border-bottom: 1px solid var(--border);
@@ -125,6 +148,30 @@ header h1 a {
 .site-nav a.active {
   color: var(--accent);
   border-bottom-color: var(--accent-dim);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  line-height: 1;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
 }
 
 /* Venue filter buttons */
