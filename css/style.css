@@ -275,11 +275,13 @@ main {
 
 /* Date group */
 .date-group {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
+  margin-bottom: 2.75rem;
 }
 
 .date-heading {
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
+  font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
